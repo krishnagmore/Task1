@@ -1,4 +1,4 @@
-package Junit;
+package junit;
 import org.junit.jupiter.api.Test;
 
 import ordersystem.OrderProcessor;
