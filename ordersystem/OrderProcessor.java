@@ -1,18 +1,13 @@
 package ordersystem;
 
 public class OrderProcessor {
-     
-	//Process Order
 	public Order processOrder(OrderQueue orderqueue) {
-		
-		return orderqueue.getTopOrder();
+		try {
+			return orderqueue.getTopOrder();
+
+		} catch (NullPointerException queueIsEmpty) {
+			queueIsEmpty.printStackTrace();
+			return null;
+		}
 	}
-	
-    @Override
-	public String toString() {
-    	
-	    return getClass().getName() + "@" + Integer.toHexString(hashCode());
-	    
-	}
-	
 }

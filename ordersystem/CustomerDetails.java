@@ -1,14 +1,13 @@
 package ordersystem;
 
 public class CustomerDetails {
-	
+
 	private String name;
 	private String address;
-	private String phone;
+	private int phone;
 	private String email;
-	
-	  //CustomerDetails Constructor 
-     public CustomerDetails(String name, String address, String phone, String email) {
+
+	public CustomerDetails(String name, String address, int phone, String email) {
 		this.name = name;
 		this.address = address;
 		this.phone = phone;
@@ -16,27 +15,25 @@ public class CustomerDetails {
 	}
 
 	public String getName() {
-	    return name;
+		return name;
 	}
 
 	public String getAddress() {
-	    return address;
+		return address;
 	}
 
-	public String getPhone() {
-	    return phone;
+	public int getPhone() {
+		return phone;
 	}
 
 	public String getEmail() {
-	    return email;
+		return email;
 	}
 
-     //Process the customer Details   	
-    public  String processCustomerDetails(CustomerDetails customer) { 
-		return "CustomerDetails [name = " + customer.name + ", address = " + customer.address
-	            + ", phone = " + customer.phone + ", email = " + customer.email + "]";
-    }
-	}	
-	
-	
-
+	public String processCustomerDetails() {
+		String customerDetails = String.format(
+				"customer name=%s; customer address =%s; customer phone =%d; customer email =%s;", name, address, phone,
+				email);
+		return customerDetails;
+	}
+}
